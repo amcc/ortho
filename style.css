@@ -54,6 +54,7 @@ li {
 }
 .control-info {
   display: block;
+  margin: 0 0 1em 0;
 }
 
 .control-info p {
@@ -84,7 +85,7 @@ button:active {
   background-color: magenta;
 }
 
-@media (min-width: 540px) {
+@media (min-width: 340px) {
   .control-info {
     display: flex;
     justify-content: space-between;
