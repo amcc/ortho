@@ -33,7 +33,8 @@ const fillColours = [colours, [bgCol]];
 let currentFillIndex = 0;
 
 function setup() {
-  createCanvas(500, 500, WEBGL);
+  const canvas = createCanvas(500, 500, WEBGL);
+  canvas.parent("canvas-parent");
   ortho(-width / 2, width / 2, height / 2, -height / 2, -1000, 1000);
   angleMode(DEGREES);
 
@@ -119,10 +120,23 @@ function keyPressed() {
   if (key === "c") {
     currentFillIndex =
       currentFillIndex < fillColours.length - 1 ? currentFillIndex + 1 : 0;
-    console.log(currentFillIndex);
+    // console.log(currentFillIndex);
+  }
+  if (key === "o") {
+    strokeBox = !strokeBox;
   }
   if (key === "s") {
-    strokeBox = !strokeBox;
+    saveSketch();
+  }
+}
+
+function mouseReleased() {
+  saveSketch();
+}
+
+function saveSketch() {
+  if (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) {
+    saveCanvas("ortho - amcc", "jpg");
   }
 }
 

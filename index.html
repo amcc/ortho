@@ -1,14 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="p5.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <meta charset="utf-8" />
-
   </head>
   <body>
     <main>
+      <div id="canvas-parent">
+        <section class="text">
+          <h1>Ortho</h1>
+          <aside>
+            <div class="control-info">
+              <div>
+                <p class="information">
+                  Ortho is a 3D grid of orthographically displayed boxes. It is
+                  an experiment with code to create an infinitely variable
+                  composition with form and colour.
+                </p>
+                <!-- <p>
+                  On mobile you can click on the controls 
+                </p> -->
+                <p>
+                  <a href="https://amcc.io">amcc.io</a> <br />
+                  <a href="https://alistairmcclymont.com"
+                    >alistairmcclymont.com</a
+                  >
+                </p>
+              </div>
+
+              <div>
+                <ul>
+                  <li><span class="control">↑</span> rotate up</li>
+                  <li><span class="control">↓</span> rotate down</li>
+                  <li><span class="control">→</span> rotate right</li>
+                  <li><span class="control">←</span> rotate left</li>
+                  <li><span class="control">l</span> lights</li>
+                  <li><span class="control">a</span> alpha</li>
+                  <li><span class="control">c</span> colours</li>
+                  <li><span class="control">o</span> outline</li>
+                  <li><span class="control">enter</span> reset</li>
+                  <li><span class="control">s / click</span> save</li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+        </section>
+      </div>
     </main>
     <script src="sketch.js"></script>
   </body>
