@@ -91,6 +91,14 @@ function randomBox(z) {
 }
 
 function keyPressed() {
+  actionSelect(key);
+}
+
+function mouseReleased() {
+  saveSketch();
+}
+
+function actionSelect(key) {
   if (key === "ArrowUp") {
     camRotation.x += 30;
   }
@@ -126,16 +134,15 @@ function keyPressed() {
     strokeBox = !strokeBox;
   }
   if (key === "s") {
-    saveSketch();
+    saveSketch(true);
   }
 }
 
-function mouseReleased() {
-  saveSketch();
-}
-
-function saveSketch() {
-  if (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) {
+function saveSketch(force = false) {
+  if (
+    (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) ||
+    force
+  ) {
     saveCanvas("ortho - amcc", "jpg");
   }
 }

@@ -1,3 +1,8 @@
+:root {
+  --bg-col: rgb(240, 240, 211);
+  --bg-col-hover: rgb(220, 220, 200);
+}
+
 html,
 body {
   margin: 0;
@@ -13,7 +18,7 @@ canvas {
 
 main {
   /* height: 100vh; */
-  margin-top: 3em;
+  margin-top: 1em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -61,6 +66,22 @@ li {
 
 a {
   color: black;
+}
+
+button {
+  text-align: left;
+  width: 12em;
+  margin: 2px;
+  padding: 1px 2px;
+  background-color: var(--bg-col);
+  background-color: yellow;
+  border: 0px solid white;
+}
+button:hover {
+  background-color: cyan;
+}
+button:active {
+  background-color: magenta;
 }
 
 @media (min-width: 540px) {
