@@ -36,7 +36,7 @@ h2 {
 
 ul {
   list-style: none;
-  margin: 0;
+  margin: 0 0 1em 0;
   padding: 0;
 }
 li {
@@ -85,7 +85,7 @@ button:active {
   background-color: magenta;
 }
 
-@media (min-width: 340px) {
+@media (min-width: 320px) {
   .control-info {
     display: flex;
     justify-content: space-between;
