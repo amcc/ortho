@@ -30,7 +30,7 @@ const bgCol = [220, 220, 200];
 let strokeBox = false;
 
 const fillColours = [colours, [bgCol]];
-let currentFillIndex = 0;
+let currentFillIndex = 1;
 
 function setup() {
   const canvas = createCanvas(500, 500, WEBGL);
@@ -52,7 +52,7 @@ function draw() {
     directionalLight(255, 255, 255, 100, 100, 100);
     ambientLight(255);
   }
-  orbitControl();
+  // orbitControl();
   updateCamPos();
 
   for (let i = 0; i < boxNum; i++) {
@@ -143,7 +143,8 @@ function saveSketch(force = false) {
     (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) ||
     force
   ) {
-    saveCanvas("ortho - amcc", "jpg");
+    const time = new Date().getTime();
+    saveCanvas("ortho amcc - " + time, "jpg");
   }
 }
 
